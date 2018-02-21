@@ -20,7 +20,7 @@ var clon=0;
 var zoom=1;
 
 var api = 'http://api.openweathermap.org/data/2.5/group?id=';
-var cities = '524901,703448,2643743,2063523,2147714,149590,3369157,3451189,3531673,5128638,5368381,4691930,6173331,5870294,1269843';
+var cities = '524901,703448,2643743,2063523,2147714,149590,3369157,3451189,3531673,5128638,5368381,4691930,6173331,5870294,1269843,2038349,3941584,2538474,292223';
 //var cities = '524901,703448,2643743';
 var units = '&units=metric';
 var apiKey = '&appid=9cc3b51af34536d164280b4c8167b062';
@@ -115,7 +115,11 @@ function setup() {
       } else if (mydata.list[i].weather[0].main == "Mist"){
         image(mist, x, y);
       } else if (mydata.list[i].weather[0].main == "Drizzle"){
+        image(mist, x, y);
+      } else if (mydata.list[i].weather[0].main == "Rain"){
         image(rain, x, y);
+      } else if (mydata.list[i].weather[0].main == "Snow"){
+        image(snow, x, y);
       } else {
         //console.log(weather.list[i].weather.main)
         image(milder, x, y);
