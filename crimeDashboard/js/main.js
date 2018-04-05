@@ -154,7 +154,7 @@ function update() {
             d1 = cdata[i],
             d = (d1 && d0) ? (x0 - d0.Year > d1.Year - x0 ? d1 : d0) : 0;
         focus.attr("transform", "translate(" + x(d.Year) + "," + y(d[crimeVal]) + ")");
-        focus.select("text").text(function() { return d3.format("$,")(d[crimeVal].toFixed(2)); });
+        focus.select("text").text(function() { return d3.format(",")(d[crimeVal].toFixed(2)); });
         focus.select(".x-hover-line").attr("y2", height - y(d[crimeVal]));
         focus.select(".y-hover-line").attr("x2", -x(d.Year));
     }
